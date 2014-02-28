@@ -101,6 +101,26 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Screens\HomeScreen.cs" />
+    <Compile Include="Screens\HomeScreen.designer.cs">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\HelloUniverse.cs" />
+    <Compile Include="Screens\HelloUniverse.designer.cs">
+      <DependentUpon>HelloUniverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\HelloWorld.cs" />
+    <Compile Include="Screens\HelloWorld.designer.cs">
+      <DependentUpon>HelloWorld.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Screens\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Screens\HomeScreen.xib" />
+    <InterfaceDefinition Include="Screens\HelloUniverse.xib" />
+    <InterfaceDefinition Include="Screens\HelloWorld.xib" />
+  </ItemGroup>
 </Project>

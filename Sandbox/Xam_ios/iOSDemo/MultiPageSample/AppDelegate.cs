@@ -25,13 +25,14 @@ namespace MultiPageSample
 		{
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			// If you have defined a root view controller, set it here:
-			// window.RootViewController = myViewController;
-			
-			// make the window visible
+
+			var rootController = new UINavigationController ();
+			HomeScreen homescreen = new HomeScreen ();
+			rootController.PushViewController (homescreen, true);
+
+			window.RootViewController = rootController;
 			window.MakeKeyAndVisible ();
-			
+
 			return true;
 		}
 	}
